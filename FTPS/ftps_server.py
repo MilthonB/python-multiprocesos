@@ -1,7 +1,7 @@
 from pyftpdlib.authorizers import DummyAuthorizer
 from pyftpdlib.handlers import FTPHandler
 from pyftpdlib.servers import FTPServer
-from pathlib import Path
+# from pathlib import Path
 
 def main():
     autorizer =  DummyAuthorizer()
@@ -11,7 +11,7 @@ def main():
     handler = FTPHandler
     handler.authorizer =  autorizer
     
-    handler.banner = ' pyftpdlib based ftpd ready '
+    handler.banner = ' FTPS - ready running... '
     
     addres = ('127.0.0.1', 2121)
     server = FTPServer( addres, handler=handler )
